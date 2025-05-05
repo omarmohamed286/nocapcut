@@ -33,11 +33,11 @@ const VideoPlayer = ({
   onEnded,
 }: Props) => {
   const showTextOnVideo = (): React.ReactNode => {
-    if (
+    const isTextShownOnVideo =
       addedText.text &&
       currentTime >= addedText.timelineStart &&
-      currentTime <= addedText.timelineEnd
-    ) {
+      currentTime <= addedText.timelineEnd;
+    if (isTextShownOnVideo) {
       return (
         <div className="absolute z-10">
           <DraggableAndResizableText

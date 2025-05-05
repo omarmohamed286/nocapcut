@@ -30,6 +30,15 @@ const ExportDialog = ({
 }: Props) => {
   const [isExportButtonVisible, setIsExportButtonVisible] = useState(true);
   const [isExportVideoEnded, setIsExportVideoEnded] = useState(false);
+
+  const handleOnExportButtonClicked = async () => {
+    setIsExportButtonVisible(false);
+    setIsExportVideoEnded(false);
+    const videoAsBlob = await addBlobToVideo();
+    downloadBlob(videoAsBlob, exportVideoDefaultName);
+    setIsExportVideoEnded(true);
+  };
+
   return (
     <Dialog>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
@@ -73,13 +82,7 @@ const ExportDialog = ({
           {isExportButtonVisible || isExportVideoEnded ? (
             <button
               className="bg-violet text-white px-4 py-2 rounded-md hover:bg-blue transition"
-              onClick={async () => {
-                setIsExportButtonVisible(false);
-                setIsExportVideoEnded(false);
-                const videoAsBlob = await addBlobToVideo();
-                downloadBlob(videoAsBlob, exportVideoDefaultName);
-                setIsExportVideoEnded(true);
-              }}
+              onClick={handleOnExportButtonClicked}
             >
               Export
             </button>

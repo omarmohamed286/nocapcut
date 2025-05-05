@@ -1,0 +1,72 @@
+Date : 2025-05-06 02:04:14
+Directory : c:\frontend\react\nocapcut\src
+Total : 34 files,  2024 codes, 15 comments, 232 blanks, all 2271 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| TypeScript JSX |         22 |      1,344 |          0 |        142 |      1,486 |
+| TypeScript     |         10 |        542 |         15 |         82 |        639 |
+| PostCSS        |          1 |        137 |          0 |          8 |        145 |
+| XML            |          1 |          1 |          0 |          0 |          1 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                    | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                       |         34 |      2,024 |         15 |        232 |      2,271 |
+| . (Files)                                                               |          3 |        141 |          1 |         11 |        153 |
+| assets                                                                  |          1 |          1 |          0 |          0 |          1 |
+| components                                                              |         21 |      1,330 |          0 |        138 |      1,468 |
+| components (Files)                                                      |         14 |        953 |          0 |         91 |      1,044 |
+| components\ui                                                           |          7 |        377 |          0 |         47 |        424 |
+| constants                                                               |          1 |          2 |         14 |          0 |         16 |
+| customTypes                                                             |          1 |         40 |          0 |         10 |         50 |
+| hooks                                                                   |          4 |        407 |          0 |         52 |        459 |
+| lib                                                                     |          1 |          5 |          0 |          2 |          7 |
+| router                                                                  |          1 |         13 |          0 |          4 |         17 |
+| utils                                                                   |          1 |         85 |          0 |         15 |        100 |
++-------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                | language       | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\frontend\react\nocapcut\src\assets\react.svg                         | XML            |          1 |          0 |          0 |          1 |
+| c:\frontend\react\nocapcut\src\components\App.tsx                       | TypeScript JSX |        213 |          0 |         15 |        228 |
+| c:\frontend\react\nocapcut\src\components\ButtonWithIcon.tsx            | TypeScript JSX |         16 |          0 |          4 |         20 |
+| c:\frontend\react\nocapcut\src\components\DraggableAndResizableRect.tsx | TypeScript JSX |         51 |          0 |          4 |         55 |
+| c:\frontend\react\nocapcut\src\components\DraggableAndResizableText.tsx | TypeScript JSX |        159 |          0 |         22 |        181 |
+| c:\frontend\react\nocapcut\src\components\EditTextForm.tsx              | TypeScript JSX |         35 |          0 |          4 |         39 |
+| c:\frontend\react\nocapcut\src\components\ExportVideoDialog.tsx         | TypeScript JSX |         96 |          0 |          5 |        101 |
+| c:\frontend\react\nocapcut\src\components\FilesPreview.tsx              | TypeScript JSX |         83 |          0 |          5 |         88 |
+| c:\frontend\react\nocapcut\src\components\Home.tsx                      | TypeScript JSX |         66 |          0 |          5 |         71 |
+| c:\frontend\react\nocapcut\src\components\ImportButton.tsx              | TypeScript JSX |         25 |          0 |          4 |         29 |
+| c:\frontend\react\nocapcut\src\components\ImportFiles.tsx               | TypeScript JSX |         32 |          0 |          4 |         36 |
+| c:\frontend\react\nocapcut\src\components\ShowVideoDialog.tsx           | TypeScript JSX |         34 |          0 |          5 |         39 |
+| c:\frontend\react\nocapcut\src\components\TimelinePlayhead.tsx          | TypeScript JSX |         65 |          0 |          7 |         72 |
+| c:\frontend\react\nocapcut\src\components\VideoPlayer.tsx               | TypeScript JSX |         75 |          0 |          5 |         80 |
+| c:\frontend\react\nocapcut\src\components\index.ts                      | TypeScript     |          3 |          0 |          2 |          5 |
+| c:\frontend\react\nocapcut\src\components\ui\button.tsx                 | TypeScript JSX |         54 |          0 |          6 |         60 |
+| c:\frontend\react\nocapcut\src\components\ui\dialog.tsx                 | TypeScript JSX |        121 |          0 |         13 |        134 |
+| c:\frontend\react\nocapcut\src\components\ui\input.tsx                  | TypeScript JSX |         18 |          0 |          4 |         22 |
+| c:\frontend\react\nocapcut\src\components\ui\label.tsx                  | TypeScript JSX |         19 |          0 |          4 |         23 |
+| c:\frontend\react\nocapcut\src\components\ui\tabs.tsx                   | TypeScript JSX |         58 |          0 |          7 |         65 |
+| c:\frontend\react\nocapcut\src\components\ui\toggle-group.tsx           | TypeScript JSX |         65 |          0 |          7 |         72 |
+| c:\frontend\react\nocapcut\src\components\ui\toggle.tsx                 | TypeScript JSX |         42 |          0 |          6 |         48 |
+| c:\frontend\react\nocapcut\src\constants\index.ts                       | TypeScript     |          2 |         14 |          0 |         16 |
+| c:\frontend\react\nocapcut\src\customTypes\index.ts                     | TypeScript     |         40 |          0 |         10 |         50 |
+| c:\frontend\react\nocapcut\src\hooks\useFilesPreview.ts                 | TypeScript     |         60 |          0 |         11 |         71 |
+| c:\frontend\react\nocapcut\src\hooks\useFilesUpload.ts                  | TypeScript     |         48 |          0 |          5 |         53 |
+| c:\frontend\react\nocapcut\src\hooks\useVideoEditing.ts                 | TypeScript     |        207 |          0 |         21 |        228 |
+| c:\frontend\react\nocapcut\src\hooks\useVideoPlayer.ts                  | TypeScript     |         92 |          0 |         15 |        107 |
+| c:\frontend\react\nocapcut\src\index.css                                | PostCSS        |        137 |          0 |          8 |        145 |
+| c:\frontend\react\nocapcut\src\lib\utils.ts                             | TypeScript     |          5 |          0 |          2 |          7 |
+| c:\frontend\react\nocapcut\src\main.tsx                                 | TypeScript JSX |          4 |          0 |          2 |          6 |
+| c:\frontend\react\nocapcut\src\router\AppRouter.tsx                     | TypeScript JSX |         13 |          0 |          4 |         17 |
+| c:\frontend\react\nocapcut\src\utils\index.ts                           | TypeScript     |         85 |          0 |         15 |        100 |
+| c:\frontend\react\nocapcut\src\vite-env.d.ts                            | TypeScript     |          0 |          1 |          1 |          2 |
+| Total                                                                   |                |      2,024 |         15 |        232 |      2,271 |
++-------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

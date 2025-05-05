@@ -53,9 +53,7 @@ const TimelinePlayhead = ({
   return (
     <div
       className="bg-gray-900 text-gray-900 h-full w-1 flex justify-center absolute z-10 cursor-col-resize"
-      onPointerDown={() => {
-        setIsDraggingPlayhead(true);
-      }}
+      onPointerDown={() => setIsDraggingPlayhead(true)}
       style={{ transform: `translateX(${playheadPosition}px)` }}
     >
       <i
