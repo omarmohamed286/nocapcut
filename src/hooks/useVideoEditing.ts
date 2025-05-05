@@ -149,17 +149,12 @@ const useVideoEditing = (
         ),
       });
     };
-
     const transcode = async () => {
-      const videoWidthMap = { 480: 854, 720: 1280, 1080: 1920 };
-      const videoWidth = videoWidthMap[outputVideoQuality];
-      const pixelRatio = videoWidth / videoContainerSize.width;
+      const { videoWidth, textBlob, textX, textY, textStartTime, textEndTime } =
+        getVideoEditingInfo();
       const ffmpeg = ffmpegRef.current;
       await ffmpeg.writeFile("video.mp4", await fetchFile(videoUrl));
-      await ffmpeg.writeFile(
-        "blob.png",
-        await fetchFile(textNodeRef.current?.toDataURL({ pixelRatio }))
-      );
+      await ffmpeg.writeFile("blob.png", await fetchFile(textBlob));
       await ffmpeg.writeFile(
         "arial.ttf",
         await fetchFile(
@@ -172,11 +167,8 @@ const useVideoEditing = (
         "-i",
         "blob.png",
         "-filter_complex",
-        `[0:v]scale=${videoWidth}:${outputVideoQuality}[scaled];[scaled][1:v]overlay=${
-          addedText.inVideoX * pixelRatio
-        }:${addedText.inVideoY * pixelRatio}:enable='between(t,${
-          addedText.timelineStart
-        },${addedText.timelineEnd})'`,
+        `[0:v]scale=${videoWidth}:${outputVideoQuality}[scaled];
+        [scaled][1:v]overlay=${textX}:${textY}:enable='between(t,${textStartTime},${textEndTime})'`,
         "-c:v",
         "libx264",
         "-preset",
@@ -196,6 +188,25 @@ const useVideoEditing = (
     setExportVideoProgress(0);
     return dataAsBlob;
   }
+
+  const getVideoEditingInfo = () => {
+    const videoWidthMap = { 480: 854, 720: 1280, 1080: 1920 };
+    const videoWidth = videoWidthMap[outputVideoQuality];
+    const pixelRatio = videoWidth / videoContainerSize.width;
+    const textBlob = textNodeRef.current?.toDataURL({ pixelRatio });
+    const textX = addedText.inVideoX * pixelRatio;
+    const textY = addedText.inVideoY * pixelRatio;
+    const textStartTime = addedText.timelineStart;
+    const textEndTime = addedText.timelineEnd;
+    return {
+      videoWidth,
+      textBlob,
+      textX,
+      textY,
+      textStartTime,
+      textEndTime,
+    };
+  };
 
   return {
     textContainerPosition,
